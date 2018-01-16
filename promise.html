@@ -15,22 +15,7 @@
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <script src="js/deferred-client.js"></script>
-    <script>
-        $(window).ready(function () {
-            $('#start-worker').click(function (ev) {
-               var message = $('#message').val();
-               var promise = processMessage(message);
-               promise.done(function (data) {
-                   $('#result').append('<li> ' + data + '</li>');
-               });
-
-                promise.fail(function (err) {
-                    console.log(err);
-                    alert(err);
-                });
-            });
-        })
-    </script>
+    <script src="js/promise.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-default">
